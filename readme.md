@@ -18,7 +18,7 @@ O objetivo do desafio é simples: Consumir uma json via xhttp e, com o resultado
 - Descreva as funcionalidades do seu desafio, venda seu peixe! Por exemplo, se fez o desafio utilizando pré-processadores e etc. 
 - Não há um limite de tempo, porém consideramos ideal não gastar mais que 8h neste desafio
 - Faça commits parciais, para que possamos acompanhar o seu desenvolvimento.
-- Em caso de dúvidas, entre em contato com nadia@agenciaeplus.com.br
+- Em caso de dúvidas, entre em contato com rodrigo.freitas@agenciaeplus.com.br ou nadia@agenciaeplus.com.br
 
 ## Dicas
 
