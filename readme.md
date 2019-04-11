@@ -2,28 +2,30 @@
 
 # E-plus Frontend Challenge
 
-Bem-vindo ao desafio de admissão de front-end da E-plus! O que preparamos para este desafio é um pedacinho do que você irá fazer aqui na Agência, caso seja admitido.
+Seja bem-vindo ao E-Plus Front-end Challenge, considere este o primeiro passo para fazer parte de uma das melhores equipes de ecommerce e marketing digital do Brasil!
 
-O objetivo do desafio é simples: Consumir uma json via xhttp e, com o resultado dele, montar um widget de mini-cart. Na resposta deste request você receberá uma lista de produtos. Esta lista servirá para alimentar o mini-cart e fazer suas manipulações. 
+Para completar o desafio com sucesso você precisará codificar o layout que segue no projeto, para isso será necessário consumir um json via xhttp que retornará uma lista de produtos na resposta do request, que servirá para alimentar e fazer manipulações no mini-cart.
+
+Então mãos a obra e bom challenge ;)
 
 ## Design
 
-- O mini cart apresentado deve seguir o [seguinte design](layout.jpg)
+- O topo apresentado deve seguir o [seguinte design](https://projects.invisionapp.com/share/NARHXUS6HCF#/357617423_Eplus)
 - Baseado neste layout, faça uma adaptação responsiva para celulares.
 
 ## Como realizar o teste
 
 - Faça um fork deste repositório em seu GitHub
 - Adicione ao Readme uma descrição de como executar seu projeto
-- Descreva as funcionalidades do seu desafio, venda seu peixe! Por exemplo, se fez o desafio utilizando pré-processadores e etc. 
-- Não há um limite de tempo, porém consideramos ideal não gastar mais que 8h neste desafio
+- Descreva as funcionalidades do seu desafio, nos conte tudo que fez! Se fez o desafio utilizando pré-processadores por exemplo, pois usaremos estas informações para avaliá-lo. 
+- O ideal é que este challenge leve até 8h.
 - Faça commits parciais, para que possamos acompanhar o seu desenvolvimento.
 - Em caso de dúvidas, entre em contato com rodrigo.freitas@agenciaeplus.com.br ou nadia@agenciaeplus.com.br
 
 ## Dicas
 
 - Os ícones usados, são todos do Material Design. https://material.io/icons/
-- As fontes utilizadas são . 
+- A fonte utilizada é Montserrat (Está fonte se encontra no google fonts). 
 - Trabalhamos com clientes perfeccionistas, portanto tenha atenção com espaçamentos, tamanhos e estilos de fonte. 
 
 ## Critérios de avaliação
