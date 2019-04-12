@@ -1,6 +1,6 @@
 ![Eplus](https://www.agenciaeplus.com.br/wp-content/themes/eplus/images/agencia-eplus-n-logo.png)
 
-# E-plus Frontend Challenge
+# E-Plus Frontend Challenge
 
 Seja bem-vindo ao E-Plus Front-end Challenge, considere este o primeiro passo para fazer parte de uma das melhores equipes de ecommerce e marketing digital do Brasil!
 
