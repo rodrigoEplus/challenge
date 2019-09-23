@@ -1,14 +1,19 @@
 <template>
-  <Content class="content" />
+  <div class="content">
+    <the-header />
+    <the-body />
+  </div>
 </template>
 
 <script>
-import Content from './components/Content.vue'
+import TheBody from './components/TheBody.vue'
+import TheHeader from './components/TheHeader.vue'
 
 export default {
   name: 'app',
   components: {
-    Content,
+    TheBody,
+    TheHeader,
   },
 }
 </script>

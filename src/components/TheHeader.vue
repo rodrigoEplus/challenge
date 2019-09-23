@@ -128,6 +128,7 @@ export default {
 
   .user-menu__item {
     height: 25px;
+    padding: 0 25px;
   }
 }
 </style>
