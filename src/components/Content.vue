@@ -1,30 +1,16 @@
 <template>
-  <div>lol</div>
+  <div class="content">
+    <the-header />
+  </div>
 </template>
 
 <script>
+import TheHeader from './TheHeader.vue'
+
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
-  }
-};
+  name: 'HelloWorld',
+  components: { TheHeader },
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+<style scoped></style>
