@@ -9,7 +9,6 @@
           <span class="product__name">
             {{ product.name }}
           </span>
-
           <div class="product__price">
             <p class="spot-price">{{ product.bestPriceFormated }}</p>
             <p class="split-price">
@@ -31,12 +30,14 @@ export default {
     }
   },
   created() {
-    this.$http
-      .get('/products.json')
-      .then(res => (this.productList = res.data.cart.item))
-      .then(() => console.log('products', this.productList))
+    this.getProductList()
   },
   methods: {
+    getProductList() {
+      this.$http
+        .get('/products.json')
+        .then(res => (this.productList = res.data.cart.item))
+    },
     bestPrice(price) {
       return (price / Math.pow(10, 3))
         .toFixed(2)
@@ -69,6 +70,7 @@ export default {
 .product__image {
   height: 50%;
   text-align: center;
+  padding: 5px;
 }
 
 .product__info {
