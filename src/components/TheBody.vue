@@ -12,7 +12,7 @@
           <div class="product__price">
             <p class="spot-price">{{ product.bestPriceFormated }}</p>
             <p class="split-price">
-              10x de R$ {{ bestPrice(product.bestPrice) }}
+              10x de R$ {{ splitPrice(product.bestPrice) }}
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default {
         .get('/products.json')
         .then(res => (this.productList = res.data.cart.item))
     },
-    bestPrice(price) {
+    splitPrice(price) {
       return (price / Math.pow(10, 3))
         .toFixed(2)
         .toString()
@@ -87,7 +87,7 @@ export default {
 
 .product__price {
   padding: 5px;
-  background-color: yellowgreen;
+  background-color: #00bc0e;
   color: white;
   border-radius: 8px;
 }
