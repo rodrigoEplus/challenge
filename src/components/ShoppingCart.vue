@@ -1,12 +1,13 @@
 <template>
   <div class="shopping-cart-wrapper">
-    <div class="shopping-cart__icon" @click="openShoppingCart">
+    <div class="shopping-cart__icon" @click="toggleShoppingCart">
       <img src="@/assets/icons/shopping_cart.svg" alt="User menu" />
+      <span class="shopping-cart__badge">{{ cartItems.length || '' }}</span>
     </div>
     <div
       :class="{
         'shopping-cart': true,
-        'shopping-cart--show': showShoppingCart,
+        'shopping-cart--show': shoppingCart,
       }"
     >
       <div class="shopping-cart__products">
@@ -61,6 +62,10 @@ export default {
         this.calculateTotalPrice(this.cartItems)
       )
     },
+    shoppingCart() {
+      console.log(this.showShoppingCart)
+      return this.showShoppingCart
+    },
   },
   created() {
     this.getProductList()
@@ -74,16 +79,16 @@ export default {
     calculateTotalPrice(shoppingCart) {
       if (!shoppingCart) return '0,00'
       return shoppingCart
-        .map(item => item.bestPrice)
+        .map(item => item.bestPrice * item.quantity)
         .reduce((oldPrice, newPrice) => oldPrice + newPrice, 0)
     },
-    moveDecimalCommaToLeft(value) {
-      return (value / Math.pow(10, 2))
-        .toFixed(2)
+    moveDecimalCommaToLeft(value, slots = 2, precision = 2) {
+      return (value / Math.pow(10, slots))
+        .toFixed(precision)
         .toString()
         .replace('.', ',')
     },
-    openShoppingCart() {
+    toggleShoppingCart() {
       return (this.showShoppingCart = !this.showShoppingCart)
     },
   },
@@ -96,23 +101,30 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   height: 100%;
   width: 100%;
 }
 
 .shopping-cart {
-  width: 250px;
+  width: 300px;
   z-index: 8;
   position: absolute;
   display: none;
   right: 0;
   top: 100%;
-  box-shadow: 0 4px 5px #ccc;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.shopping-cart-wrapper:hover .shopping-cart {
-  display: block;
+.shopping-cart__badge {
+  position: absolute;
+  bottom: 10px;
+  right: 3px;
+  background-color: #00bc0e;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 8px;
+  padding: 2px 7px;
 }
 
 .shopping-cart--show {
@@ -121,19 +133,18 @@ export default {
 
 .shopping-cart:after {
   bottom: 100%;
-  left: 82%;
+  right: 10px;
   border: solid transparent;
   content: ' ';
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
   border-bottom-color: #eee;
   border-width: 10px;
 }
 
 .shopping-cart__products {
-  height: 180px;
+  max-height: 250px;
   overflow: auto;
   padding: 5px;
   background-color: #eee;
@@ -205,5 +216,21 @@ export default {
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .shopping-cart__badge {
+    bottom: 20px;
+    right: 10px;
+    font-size: 10px;
+  }
+
+  .shopping-cart-wrapper:hover .shopping-cart {
+    display: block;
+  }
+
+  .shopping-cart:after {
+    right: 25px;
+  }
 }
 </style>
