@@ -1,0 +1,13 @@
+.hidden-in-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hidden-in-mobile {
+    display: inline;
+  }
+
+  .hidden-in-desktop {
+    display: none;
+  }
+}
