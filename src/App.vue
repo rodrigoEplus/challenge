@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div id="app">
     <the-header />
     <the-body />
   </div>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 @import url('style/helpers/index.css');
 
 * {
@@ -28,7 +28,7 @@ export default {
   box-sizing: border-box;
 }
 
-.content {
+body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;

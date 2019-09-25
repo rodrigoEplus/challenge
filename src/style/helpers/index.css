@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1024px) {
   .hidden-in-mobile {
     display: inline;
   }
