@@ -2,9 +2,12 @@
   <div class="shopping-cart-wrapper">
     <div class="shopping-cart__icon" @click="toggleShoppingCart">
       <img src="@/assets/icons/shopping_cart.svg" alt="User menu" />
-      <span class="shopping-cart__badge">{{ cartItems.length || '' }}</span>
+      <span v-if="cartItems.length" class="shopping-cart__badge">
+        {{ cartItems.length || '' }}
+      </span>
     </div>
     <div
+      v-if="cartItems.length"
       :class="{
         'shopping-cart': true,
         'shopping-cart--show': shoppingCart,
@@ -218,6 +221,16 @@ export default {
   cursor: pointer;
 }
 
+@keyframes unfold {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .shopping-cart__badge {
     bottom: 20px;
@@ -225,8 +238,11 @@ export default {
     font-size: 10px;
   }
 
-  .shopping-cart-wrapper:hover .shopping-cart {
+  .shopping-cart-wrapper:hover > .shopping-cart {
+    transform-origin: top right;
     display: block;
+    perspective: 100px;
+    animation: unfold 0.3s ease-in-out;
   }
 
   .shopping-cart:after {
