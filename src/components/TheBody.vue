@@ -51,6 +51,8 @@ export default {
 <style scoped>
 .content {
   padding: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .product__card {
@@ -101,10 +103,9 @@ export default {
   font-size: 10px;
 }
 
-@media only screen and (min-width: 600px) {
-  .product {
-    display: flex;
-    justify-content: center;
-  }
+.product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 </style>
